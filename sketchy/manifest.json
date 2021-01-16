@@ -16,5 +16,8 @@
           "css": ["popup.css"],
           "js": ["popup.js"]
       }],
-    "manifest_version": 2
+    "manifest_version": 2,
+    "icons": {
+      "16" : "./images/ICON.png"
+    }
   }
