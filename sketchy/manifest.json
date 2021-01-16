@@ -18,6 +18,8 @@
       }],
     "manifest_version": 2,
     "icons": {
-      "16" : "./images/ICON.png"
+      "16": "./images/ICON.png",
+      "48": "./images/ICON.png",
+      "128": "./images/ICON.png"
     }
   }
