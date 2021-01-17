@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	    grd.addColorStop("0.6", "green");
             grd.addColorStop("0.8", "yellow");
  	    grd.addColorStop(1, "red");
+	    ctx.strokeStyle = grd;
 	}else{
             ctx.strokeStyle = "#000000";
         }
@@ -130,14 +131,14 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.strokeStyle = "#E5E5E5";
         backgroundColor = "#E5E5E5"
         drawRect();
-	var grd = ctx.createLinearGradient(0, 0, 170, 0);
+	var grd = ctx.createLinearGradient(0, 0, 680, 0);
 	grd.addColorStop(0, "black");
 	grd.addColorStop("0.3", "magenta");
 	grd.addColorStop("0.5", "blue");
 	grd.addColorStop("0.6", "green");
         grd.addColorStop("0.8", "yellow");
  	grd.addColorStop(1, "red");
-
+	ctx.strokeStyle = grd;
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
