@@ -37,4 +37,4 @@ Sketchy is built using primarily **HTML**, **CSS**, and **JavaScript**. The user
 # Future Extentions
 In hopes of making students' lives even better and more efficient, the team sees a ton of potential in this application for future implementations:
 * Creating a transparent mode that will extend outside of the canvas and allow users to draw directly on their current tab
-* Allow users to send their sketches via messaging amd email platforms (e.g. Facebook Messenger, Gmail) through working with external APIs
+* Allow users to send their sketches via messaging and email platforms (e.g. Facebook Messenger, Gmail) through working with external APIs
