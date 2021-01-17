@@ -19,9 +19,9 @@ Sketchy features a blank canvas with a pen tool, an eraser tool, and an option t
 
 Sketchy features 3 different modes: Sketchy mode, Dark mode, and Rainbow mode. 
 
-**Sketchy Mode** is the default mode, with a simple colour scheme and black pen tool.
-**Dark Mode** is for those who prefer working with darker-coloured screens and uses a white pen tool.
-**Rainbow Mode** is created for those craving a light-hearted, cute mode to work on and uses a rainbow-coloured pen tool.
+  **Sketchy Mode** is the default mode, with a simple colour scheme and black pen tool.
+  **Dark Mode** is for those who prefer working with darker-coloured screens and uses a white pen tool.
+  **Rainbow Mode** is created for those craving a light-hearted, cute mode to work on and uses a rainbow-coloured pen tool.
 
 # Setup Instructions
 To run Sketchy as a Chrome extension on your own Google Chrome browser, extract the files from the Github repo as a .zip file. After you have saved the folder in a secure location, follow these steps:
