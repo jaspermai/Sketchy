@@ -28,7 +28,7 @@ To run Sketchy as a Chrome extension on your own Google Chrome browser, extract 
 1. Navigate to the chrome://extensions page through Chrome -> settings or typing it into the search bar
 1. Turn on *Developer Mode* on the top-right corner
 1. Click on the *Load unpacked* button that is on the top bar
-1. Select the *Sketchy* file from your local device
+1. Select the *Sketchy* file from your local device\
 The extension can now be found in your Chrome Extensions list in the top right of your browser! Feel free to pin the extension for easy access in the future. For optimal use, open the extension on any *https* or *http* website.
 
 # Building Sketchy
