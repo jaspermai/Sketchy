@@ -18,23 +18,23 @@
 }
 
 
-.inner-body input {
+.inner-body img {
     outline: none;
 }
 
-.clickable input:hover {
+.clickable img:hover {
     opacity: 0.7;
     cursor: pointer;
 }
 
-.toolbar input {
+.toolbar img {
     width: 45px;
     height: 45px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.modes input {
+.modes img {
     width: 55px;
     height: 55px;
     margin-left: 2px;
