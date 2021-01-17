@@ -51,7 +51,32 @@ document.addEventListener('DOMContentLoaded', function() {
     var dark = document.getElementById('dark');
     // onClick's logic below:
     dark.addEventListener('click', function() {
-	document.getElementsByClassName("bottombar")[0].style.backgroundColor="#7FFF00";
+        // Bottombar
+        document.getElementsByClassName("bottombar")[0].style.backgroundColor="#533A89";
+        // Navbar
+        document.getElementsByClassName("topbar")[0].style.backgroundColor="#533A89";
+        // Canvas
+        document.getElementsByClassName("inner-body")[0].style.backgroundColor="#201F4B";
+        // Logo
+        document.getElementsByClassName("logo")[0].style.filter="invert(1) brightness(2)";
+        // Pen
+        document.getElementById("pen").style.filter="invert(1) brightness(2)";
+        // Eraser
+        document.getElementById("eraser").style.filter="invert(1) brightness(2)";
+        // Clear
+        document.getElementById("clear").style.filter="invert(1) brightness(2)";
+        // Thiccs
+        var thiccs = document.getElementsByClassName("thick");
+        for (var i = 0; i < thiccs.length; i++) {
+            thiccs[i].style.filter="invert(1) brightness(2)";
+        }
+        // Save-Buttons
+        var buttons = document.getElementsByClassName("save-button");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].style.cssText="color: white; border-color: white;"
+            buttons[i].classList.remove('hover2');
+            buttons[i].classList.add('hover1');
+        }
     });
 });
 document.addEventListener('DOMContentLoaded', function() {

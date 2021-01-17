@@ -41,27 +41,27 @@
     margin-right: 2px;
 }
 
-.thick1{
+#thi{
     width: 8px;
     height: 8px;
     margin-right: 4px;
 }
 
-    .thick2 {
+    #thic {
         width: 13px;
         height: 13px;
         margin-left: 4px;
         margin-right: 4px;
     }
 
-    .thick3 {
+    #thicc {
         width: 18px;
         height: 18px;
         margin-left: 4px;
         margin-right: 4px;
     }
 
-    .thick4 {
+    #thiccc{
         width: 23px;
         height: 23px;
         margin-left: 4px;
@@ -81,7 +81,7 @@
     width: 100%;
 }
 
-.bottombar button {
+.save-button {
     margin-left: 1%;
     margin-right: 1%;
     float: right;
@@ -90,8 +90,14 @@
     font-family: 'Tahoma';
 }
 
-.bottombar button:hover {
+.hover2:hover {
     background-color: black;
     border-color: black;
     color: white;
+}
+
+.hover1:hover {
+    background-color:white;
+    border-color:white;
+    color: black;
 }
