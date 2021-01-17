@@ -246,6 +246,14 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     })
 
+document.addEventListener('DOMContentLoaded', function() {
+    var jpg = document.getElementById('jpg');
+    jpg.addEventListener('click', function() {
+        var canvas = document.getElementById('canvas');
+        jpg.href = canvas.toDataURL("image/jpeg", 1.0);
+        jpg.download = 'note.jpg';
+        })
+    })
 
 //Google drive stuff
       var clientId = '573644075529-c4ucnfe2p4u4auoc91069op3p9sd0shn.apps.googleusercontent.com';
