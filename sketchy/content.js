@@ -1,5 +1,7 @@
 var ctx, color = "#000";
 var darkMode = false;
+var backgroundColor = "#FFF9EB";
+
 function test(){
     	drawTouch();
 	drawPointer();
@@ -29,31 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
-    var thi = document.getElementById('thi');
+    var thi = document.getElementById('myRange');
     // onClick's logic below:
 	thi.addEventListener('click', function() {
-	ctx.lineWidth = 3;
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    var thic = document.getElementById('thic');
-    // onClick's logic below:
-    thic.addEventListener('click', function() {
-	ctx.lineWidth = 5;	
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    var thicc = document.getElementById('thicc');
-    // onClick's logic below:
-    thicc.addEventListener('click', function() {
-	ctx.lineWidth = 7;	
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    var thiccc = document.getElementById('thiccc');
-    // onClick's logic below:
-    thiccc.addEventListener('click', function() {
-	ctx.lineWidth = 9;	
+	ctx.lineWidth = ((document.getElementById('myRange').value)/10)
+		document.alert("hi");
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
@@ -87,8 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         // Pen Color
         ctx.strokeStyle = "#FFFFFF";
+        backgroundColor = "#201F4B"
+        drawRect();
     });
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     var regular = document.getElementById('regular');
     // onClick's logic below:
@@ -120,6 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         // Pen Color
         ctx.strokeStyle = "#000000";
+        backgroundColor = "#FFF9EB"
+        drawRect();
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
@@ -129,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);	
     });
 });
+
 document.addEventListener( "DOMContentLoaded", function(){
 
 	// setup a new canvas for drawing wait for device init
@@ -141,30 +129,41 @@ document.addEventListener( "DOMContentLoaded", function(){
 function newCanvas(){
 	//define and resize canvas
     document.getElementById("content").style.height = window.innerHeight-90;
-    var canvas = '<canvas id="canvas" width="900" height="'+(window.innerHeight-90)+'"></canvas>';
+    var canvas = '<canvas id="canvas" width="'+(window.innerWidth)+'" height="'+(window.innerHeight-90)+'"></canvas>';
 	document.getElementById("content").innerHTML = canvas;
     
     // setup canvas
 	ctx=document.getElementById("canvas").getContext("2d");
 	ctx.strokeStyle = color;
-	ctx.lineWidth = 5;	
+    ctx.lineWidth = 5;
 	
-	// setup to trigger drawing on mouse or touch
+    // setup to trigger drawing on mouse or touch
+    drawRect();
     drawTouch();
     drawPointer();
 	drawMouse();
 }
 
+function drawRect() {
+    var canvas = document.getElementById('canvas');
+    if (canvas.getContext) {
+      var ctx = canvas.getContext('2d');
+
+      ctx.fillStyle = backgroundColor;
+      ctx.fillRect(0, 0, 700, 500);
+    }
+  }
+
 var drawTouch = function() {
 	var start = function(e) {
 		ctx.beginPath();
-		x = e.changedTouches[0].pageX-90;
+		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY-74;
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
 		e.preventDefault();
-		x = e.changedTouches[0].pageX-90;
+		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY-74;
 		ctx.lineTo(x,y);
 		ctx.stroke();
@@ -176,13 +175,13 @@ var drawTouch = function() {
 var drawTouch = function() {
 	var start = function(e) {
 		ctx.beginPath();
-		x = e.changedTouches[0].pageX-90;
+		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY-74;
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
 		e.preventDefault();
-		x = e.changedTouches[0].pageX-90
+		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY-74;
 		ctx.lineTo(x,y);
 		ctx.stroke();
@@ -196,14 +195,14 @@ var drawPointer = function() {
 	var start = function(e) {
         e = e.originalEvent;
 		ctx.beginPath();
-		x = e.pageX-90;
+		x = e.pageX;
 		y = e.pageY-74;
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
 		e.preventDefault();
         e = e.originalEvent;
-		x = e.pageX-90;
+		x = e.pageX;
 		y = e.pageY-74;
 		ctx.lineTo(x,y);
 		ctx.stroke();
@@ -218,13 +217,13 @@ var drawMouse = function() {
 	var start = function(e) {
 		clicked = 1;
 		ctx.beginPath();
-		x = e.pageX-90;
+		x = e.pageX;
 		y = e.pageY-74;
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
 		if(clicked){
-			x = e.pageX-90;
+			x = e.pageX;
 			y = e.pageY-74;
 			ctx.lineTo(x,y);
 			ctx.stroke();
@@ -237,3 +236,22 @@ var drawMouse = function() {
 	document.getElementById("canvas").addEventListener("mousemove", move, false);
 	document.addEventListener("mouseup", stop, false);
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+    var png = document.getElementById('png');
+    png.addEventListener('click', function() {
+        var canvas = document.getElementById('canvas');
+        png.href = canvas.toDataURL();
+        png.download = 'note.png';
+        })
+    })
+    
+document.addEventListener('DOMContentLoaded', function() {
+    var jpg = document.getElementById('jpg');
+    jpg.addEventListener('click', function() {
+        var canvas = document.getElementById('canvas');
+        jpg.href = canvas.toDataURL("image/jpeg", 1.0);
+        jpg.download = 'note.jpg';
+        })
+    })
+        
