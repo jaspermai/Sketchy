@@ -68,7 +68,7 @@
         margin-right: 7px;
     }
 
-.inner-body .container:hover {
+.inner-body #content {
     cursor: cell;
 }
 
