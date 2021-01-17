@@ -80,17 +80,6 @@ function newCanvas(){
 	drawMouse();
 }
 
-function selectColor(el){
-    /*for(var i=0;i<document.getElementsByClassName("pen").length;i++){
-        document.getElementsByClassName("pen")[i].style.borderColor = "#777";
-        document.getElementsByClassName("pen")[i].style.borderStyle = "solid";
-    }
-    el.style.borderColor = "#fff";
-    el.style.borderStyle = "dashed";
-    color = window.getComputedStyle(el).backgroundColor; */
-    ctx.beginPath();
-}
-
 var drawTouch = function() {
 	var start = function(e) {
 		ctx.beginPath();
