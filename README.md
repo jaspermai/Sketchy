@@ -23,6 +23,13 @@ Sketchy features 3 different modes: Sketchy mode, Dark mode, and Rainbow mode.
 **Dark Mode** is for those who prefer working with darker-coloured screens and uses a white pen tool.
 **Rainbow Mode** is created for those craving a light-hearted, cute mode to work on and uses a rainbow-coloured pen tool.
 
+# Setup Instructions
+To run Sketchy as a Chrome extension on your own Google Chrome browser, extract the files from the Github repo as a .zip file. After you have saved the folder in a secure location, follow these steps:
+1. Navigate to the chrome://extensions page through Chrome -> settings or typing it into the search bar
+1. Turn on *Developer Mode* on the top-right corner
+1. Click on the *Load unpacked* button that is on the top bar
+1. Select the *Sketchy* file from your local device
+The extension can now be found in your Chrome Extensions list in the top right of your browser! Feel free to pin the extension for easy access in the future. For optimal use, open the extension on any *https* or *http* website.
 
 # Building Sketchy
 Sketchy is built using primarily **HTML**, **CSS**, and **JavaScript**. The user interface and logo were designed with **Figma**, HTML, CSS, and **Bootstrap** while the backend interactiveness was accomplished through JavaScript. The team also worked with a **Canvas API**, which provided the starting blocks for the overall sketchpad.
