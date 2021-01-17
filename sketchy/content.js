@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);	
     });
 });
+
 document.addEventListener( "DOMContentLoaded", function(){
 
 	// setup a new canvas for drawing wait for device init
@@ -236,3 +237,12 @@ var drawMouse = function() {
 	document.getElementById("canvas").addEventListener("mousemove", move, false);
 	document.addEventListener("mouseup", stop, false);
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+    var png = document.getElementById('png');
+    png.addEventListener('click', function() {
+        var canvas = document.getElementById('canvas');
+        png.href = canvas.toDataURL();
+        png.download = 'note.png';
+        })
+    })

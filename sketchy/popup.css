@@ -41,6 +41,10 @@
     margin-right: 2px;
 }
 
+#content {
+    background-color: #FFF9EB;
+}
+
 #thi{
     width: 8px;
     height: 8px;
