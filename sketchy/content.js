@@ -48,6 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
+    var dark = document.getElementById('dark');
+    // onClick's logic below:
+    dark.addEventListener('click', function() {
+	document.getElementsByClassName("bottombar")[0].style.backgroundColor="#7FFF00";
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
     var clear = document.getElementById('clear');
     // onClick's logic below:
     clear.addEventListener('click', function() {
@@ -148,9 +155,6 @@ var drawPointer = function() {
 	document.getElementById("canvas").addEventListener("MSPointerMove", move, false);
 };      
 
-function pencil(){
-	window.alert("HAHA");
-}
 // prototype to	start drawing on mouse using canvas moveTo and lineTo
 var drawMouse = function() {
 	var clicked = 0;
