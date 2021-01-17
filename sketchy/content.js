@@ -20,31 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
-    var thi = document.getElementById('thi');
+    var thi = document.getElementById('myRange');
     // onClick's logic below:
 	thi.addEventListener('click', function() {
-	ctx.lineWidth = 3;
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    var thic = document.getElementById('thic');
-    // onClick's logic below:
-    thic.addEventListener('click', function() {
-	ctx.lineWidth = 5;	
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    var thicc = document.getElementById('thicc');
-    // onClick's logic below:
-    thicc.addEventListener('click', function() {
-	ctx.lineWidth = 7;	
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    var thiccc = document.getElementById('thiccc');
-    // onClick's logic below:
-    thiccc.addEventListener('click', function() {
-	ctx.lineWidth = 9;	
+	ctx.lineWidth = ((document.getElementById('myRange').value)/10)
+		document.alert("hi");
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
