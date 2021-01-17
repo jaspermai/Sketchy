@@ -1,5 +1,59 @@
 var ctx, color = "#000";
+function test(){
+    	drawTouch();
+	drawPointer();
+	drawMouse();
+}
+document.addEventListener('DOMContentLoaded', function() {
+    var pen = document.getElementById('pen');
+    // onClick's logic below:
+    pen.addEventListener('click', function() { 
+	ctx.strokeStyle = "#000000";
+    });
+});
 
+document.addEventListener('DOMContentLoaded', function() {
+    var erase = document.getElementById('eraser');
+    // onClick's logic below:
+    erase.addEventListener('click', function() {
+	ctx.strokeStyle = "#FFF9EB";
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var thi = document.getElementById('thi');
+    // onClick's logic below:
+	thi.addEventListener('click', function() {
+	ctx.lineWidth = 3;
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var thic = document.getElementById('thic');
+    // onClick's logic below:
+    thic.addEventListener('click', function() {
+	ctx.lineWidth = 5;	
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var thicc = document.getElementById('thicc');
+    // onClick's logic below:
+    thicc.addEventListener('click', function() {
+	ctx.lineWidth = 7;	
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var thiccc = document.getElementById('thiccc');
+    // onClick's logic below:
+    thiccc.addEventListener('click', function() {
+	ctx.lineWidth = 9;	
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var clear = document.getElementById('clear');
+    // onClick's logic below:
+    clear.addEventListener('click', function() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);	
+    });
+});
 document.addEventListener( "DOMContentLoaded", function(){
 
 	// setup a new canvas for drawing wait for device init
@@ -35,7 +89,6 @@ function selectColor(el){
     el.style.borderStyle = "dashed";
     color = window.getComputedStyle(el).backgroundColor; */
     ctx.beginPath();
-    ctx.strokeStyle = color;
 }
 
 var drawTouch = function() {
@@ -95,6 +148,9 @@ var drawPointer = function() {
 	document.getElementById("canvas").addEventListener("MSPointerMove", move, false);
 };      
 
+function pencil(){
+	window.alert("HAHA");
+}
 // prototype to	start drawing on mouse using canvas moveTo and lineTo
 var drawMouse = function() {
 	var clicked = 0;
