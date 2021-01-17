@@ -1,5 +1,7 @@
 var ctx, color = "#000";
 var darkMode = false;
+var backgroundColor = "#FFF9EB";
+
 function test(){
     	drawTouch();
 	drawPointer();
@@ -67,12 +69,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         // Pen Color
         ctx.strokeStyle = "#FFFFFF";
+        backgroundColor = "#201F4B"
+        drawRect();
     });
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     var regular = document.getElementById('regular');
     // onClick's logic below:
     regular.addEventListener('click', function() {
+        darkMode = false;
         // Bottombar
         document.getElementsByClassName("bottombar")[0].style.backgroundColor="#DAB8B6";
         // Navbar
@@ -99,6 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         // Pen Color
         ctx.strokeStyle = "#000000";
+        backgroundColor = "#FFF9EB"
+        drawRect();
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
@@ -129,11 +137,22 @@ function newCanvas(){
 	ctx.strokeStyle = color;
     ctx.lineWidth = 5;
 	
-	// setup to trigger drawing on mouse or touch
+    // setup to trigger drawing on mouse or touch
+    drawRect();
     drawTouch();
     drawPointer();
 	drawMouse();
 }
+
+function drawRect() {
+    var canvas = document.getElementById('canvas');
+    if (canvas.getContext) {
+      var ctx = canvas.getContext('2d');
+
+      ctx.fillStyle = backgroundColor;
+      ctx.fillRect(0, 0, 700, 500);
+    }
+  }
 
 var drawTouch = function() {
 	var start = function(e) {
@@ -226,6 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
         png.download = 'note.png';
         })
     })
+<<<<<<< HEAD
 
 
 //Google drive stuff
@@ -279,3 +299,15 @@ document.addEventListener('DOMContentLoaded', function() {
           });        
         });
       }
+=======
+    
+document.addEventListener('DOMContentLoaded', function() {
+    var jpg = document.getElementById('jpg');
+    jpg.addEventListener('click', function() {
+        var canvas = document.getElementById('canvas');
+        jpg.href = canvas.toDataURL("image/jpeg", 1.0);
+        jpg.download = 'note.jpg';
+        })
+    })
+        
+>>>>>>> 5360cbff47d09356961ff8e1a3e069a6cef0e2f1
