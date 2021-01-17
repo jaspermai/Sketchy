@@ -50,22 +50,22 @@
     #thic {
         width: 13px;
         height: 13px;
-        margin-left: 4px;
-        margin-right: 4px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     #thicc {
         width: 18px;
         height: 18px;
-        margin-left: 4px;
-        margin-right: 4px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     #thiccc{
         width: 23px;
         height: 23px;
-        margin-left: 4px;
-        margin-right: 4px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
 .inner-body .container:hover {
