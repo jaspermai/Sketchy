@@ -1,4 +1,5 @@
 var ctx, color = "#000";
+var darkMode = false;
 function test(){
     	drawTouch();
 	drawPointer();
@@ -8,7 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var pen = document.getElementById('pen');
     // onClick's logic below:
     pen.addEventListener('click', function() { 
-	ctx.strokeStyle = "#000000";
+        if (darkMode == false) {
+            ctx.strokeStyle = "#000000";
+        } else {
+            ctx.strokeStyle = "#FFFFFF";
+        }
     });
 });
 
@@ -16,7 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var erase = document.getElementById('eraser');
     // onClick's logic below:
     erase.addEventListener('click', function() {
-	ctx.strokeStyle = "#FFF9EB";
+        if (darkMode == false) {
+            ctx.strokeStyle = "#FFF9EB";
+        } else {
+            ctx.strokeStyle = "#201F4B";
+        }
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
@@ -51,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var dark = document.getElementById('dark');
     // onClick's logic below:
     dark.addEventListener('click', function() {
+        darkMode = true;
         // Bottombar
         document.getElementsByClassName("bottombar")[0].style.backgroundColor="#533A89";
         // Navbar
@@ -74,9 +84,41 @@ document.addEventListener('DOMContentLoaded', function() {
         var buttons = document.getElementsByClassName("save-button");
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].style.cssText="color: white; border-color: white;"
-            buttons[i].classList.remove('hover2');
-            buttons[i].classList.add('hover1');
         }
+        // Pen Color
+        ctx.strokeStyle = "#FFFFFF";
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var regular = document.getElementById('regular');
+    // onClick's logic below:
+    regular.addEventListener('click', function() {
+        // Bottombar
+        document.getElementsByClassName("bottombar")[0].style.backgroundColor="#DAB8B6";
+        // Navbar
+        document.getElementsByClassName("topbar")[0].style.backgroundColor="#DAB8B6";
+        // Canvas
+        document.getElementsByClassName("inner-body")[0].style.backgroundColor="#FFF9EB";
+        // Logo
+        document.getElementsByClassName("logo")[0].style.filter="none";
+        // Pen
+        document.getElementById("pen").style.filter="none";
+        // Eraser
+        document.getElementById("eraser").style.filter="none";
+        // Clear
+        document.getElementById("clear").style.filter="none";
+        // Thiccs
+        var thiccs = document.getElementsByClassName("thick");
+        for (var i = 0; i < thiccs.length; i++) {
+            thiccs[i].style.filter="none";
+        }
+        // Save-Buttons
+        var buttons = document.getElementsByClassName("save-button");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].style.cssText="color: black; border-color: black;"
+        }
+        // Pen Color
+        ctx.strokeStyle = "#000000";
     });
 });
 document.addEventListener('DOMContentLoaded', function() {

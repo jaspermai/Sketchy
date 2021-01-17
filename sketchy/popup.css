@@ -90,14 +90,8 @@
     font-family: 'Tahoma';
 }
 
-.hover2:hover {
+.save-button:hover {
     background-color: black;
     border-color: black;
-    color: white;
-}
-
-.hover1:hover {
-    background-color:white;
-    border-color:white;
-    color: black;
+    color: white !important;
 }
