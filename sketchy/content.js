@@ -245,7 +245,6 @@ document.addEventListener('DOMContentLoaded', function() {
         png.download = 'note.png';
         })
     })
-<<<<<<< HEAD
 
 
 //Google drive stuff
@@ -299,7 +298,6 @@ document.addEventListener('DOMContentLoaded', function() {
           });        
         });
       }
-=======
     
 document.addEventListener('DOMContentLoaded', function() {
     var jpg = document.getElementById('jpg');
@@ -310,4 +308,3 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     })
         
->>>>>>> 5360cbff47d09356961ff8e1a3e069a6cef0e2f1
