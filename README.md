@@ -13,7 +13,7 @@
 # Sketchy
 ![Image of Sketchy Logo](https://github.com/terryluan12/bread/blob/main/sketchy/images/LOGO.png)
 
-While there are several online apps for skektching or jotting down notes (e.g. sketchpad.io and notes.io), none of these applications provide quick access and they all require opening *another* new webpage or tab. **Sketchy** is a Google Chrome Extension that allow users to quickly *sketch* down drawings and notes. Users can use the application for any momentary ideas and save their canvas onto their computer as a .png or .jpg file for future access. 
+While there are several online apps for sketching or jotting down notes (e.g. sketchpad.io and notes.io), none of these applications provide quick access and they all require opening *another* new webpage or tab. **Sketchy** is a Google Chrome Extension that allow users to quickly *sketch* down drawings and notes. Users can use the application for any momentary ideas and save their canvas onto their computer as a .png or .jpg file for future access. 
 
 Sketchy features a blank canvas with a pen tool, an eraser tool, and an option to clear the canvas - all accessible with just **one click**. The thickness of the pen can be adjusted with a slider on the navigation bar and the sketches can be saved locally onto your computer.
 
