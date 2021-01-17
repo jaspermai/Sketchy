@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var regular = document.getElementById('regular');
     // onClick's logic below:
     regular.addEventListener('click', function() {
+        darkMode = false;
         // Bottombar
         document.getElementsByClassName("bottombar")[0].style.backgroundColor="#DAB8B6";
         // Navbar
