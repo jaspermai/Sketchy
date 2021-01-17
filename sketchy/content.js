@@ -306,3 +306,13 @@ document.addEventListener('DOMContentLoaded', function() {
           });        
         });
       }
+    
+document.addEventListener('DOMContentLoaded', function() {
+    var jpg = document.getElementById('jpg');
+    jpg.addEventListener('click', function() {
+        var canvas = document.getElementById('canvas');
+        jpg.href = canvas.toDataURL("image/jpeg", 1.0);
+        jpg.download = 'note.jpg';
+        })
+    })
+        
