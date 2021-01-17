@@ -29,7 +29,7 @@ To run Sketchy as a Chrome extension on your own Google Chrome browser, extract 
 1. Turn on *Developer Mode* on the top-right corner
 1. Click on the *Load unpacked* button that is on the top bar
 1. Select the *Sketchy* file from your local device
-<br/>The extension can now be found in your Chrome Extensions list in the top right of your browser! Feel free to pin the extension for easy access in the future. For optimal use, open the extension on any *https* or *http* website.
+<br/><br/>The extension can now be found in your Chrome Extensions list in the top right of your browser! Feel free to pin the extension for easy access in the future. For optimal use, open the extension on any *https* or *http* website.
 
 # Building Sketchy
 Sketchy is built using primarily **HTML**, **CSS**, and **JavaScript**. The user interface and logo were designed with **Figma**, HTML, CSS, and **Bootstrap** while the backend interactiveness was accomplished through JavaScript. The team also worked with a **Canvas API**, which provided the starting blocks for the overall sketchpad.
