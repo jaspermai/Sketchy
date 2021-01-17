@@ -13,9 +13,9 @@
 # Sketchy
 ![Image of Sketchy Logo](https://github.com/terryluan12/bread/blob/main/sketchy/images/LOGO.png)
 
-While there are many apps for doing sketches or jotting down notes (e.g. sketchpad.io and notepad.io), none of these applications provide quick access and they all require additional actions of operning a new webpage or tab. **Sketchy** is a Google Chrome Extension that allow users to quickly *sketch* down some drawings or notes. Users can use the application for any momentary ideas and save their canvas onto their computer as a .png or .jpg file for future access. 
+While there are many apps for doing sketches or jotting down notes (e.g. sketchpad.io and notepad.io), none of these applications provide quick access and they all require additional actions of opening a new webpage or tab. **Sketchy** is a Google Chrome Extension that allow users to quickly *sketch* down some drawings or notes. Users can use the application for any momentary ideas and save their canvas onto their computer as a .png or .jpg file for future access. 
 
-Sketchy features a canvas with a pen tool, an eraser tool, and a tool to clear the canvas - all accessible with just **one click**. The thickness of the pen can be adjusted with the slider on the application and the sketches can be saved locally onto your computer.
+Sketchy features a blank canvas with a pen tool, an eraser tool, and a tool to clear the canvas - all accessible with just **one click**. The thickness of the pen can be adjusted with the slider on the navigation bar and the sketches can be saved locally onto your computer.
 
 Sketchy also features 3 different modes: Sketchy mode, Dark mode, and Rainbow mode. 
 
@@ -30,5 +30,5 @@ Sketchy is built using primarily **HTML**, **CSS**, and **JavaScript**. The user
 
 # Future Expectations
 In hopes of making students' lives EVEN better and more efficient, the team sees a ton of potential in this application for future implementations:
-* Creating a transparent mode that will extend out of the canvas and allows users to draw directly on their current tab
+* Creating a transparent mode that will extend outside of the canvas and allow users to draw directly on their current tab
 * Allow users to send their sketches via messaging amd email platforms (e.g. Facebook Messenger, Gmail)
