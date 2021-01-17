@@ -141,13 +141,13 @@ document.addEventListener( "DOMContentLoaded", function(){
 function newCanvas(){
 	//define and resize canvas
     document.getElementById("content").style.height = window.innerHeight-90;
-    var canvas = '<canvas id="canvas" width="900" height="'+(window.innerHeight-90)+'"></canvas>';
+    var canvas = '<canvas id="canvas" width="'+(window.innerWidth)+'" height="'+(window.innerHeight-90)+'"></canvas>';
 	document.getElementById("content").innerHTML = canvas;
     
     // setup canvas
 	ctx=document.getElementById("canvas").getContext("2d");
 	ctx.strokeStyle = color;
-	ctx.lineWidth = 5;	
+    ctx.lineWidth = 5;
 	
 	// setup to trigger drawing on mouse or touch
     drawTouch();
@@ -158,13 +158,13 @@ function newCanvas(){
 var drawTouch = function() {
 	var start = function(e) {
 		ctx.beginPath();
-		x = e.changedTouches[0].pageX-90;
+		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY-74;
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
 		e.preventDefault();
-		x = e.changedTouches[0].pageX-90;
+		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY-74;
 		ctx.lineTo(x,y);
 		ctx.stroke();
@@ -176,13 +176,13 @@ var drawTouch = function() {
 var drawTouch = function() {
 	var start = function(e) {
 		ctx.beginPath();
-		x = e.changedTouches[0].pageX-90;
+		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY-74;
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
 		e.preventDefault();
-		x = e.changedTouches[0].pageX-90
+		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY-74;
 		ctx.lineTo(x,y);
 		ctx.stroke();
@@ -196,14 +196,14 @@ var drawPointer = function() {
 	var start = function(e) {
         e = e.originalEvent;
 		ctx.beginPath();
-		x = e.pageX-90;
+		x = e.pageX;
 		y = e.pageY-74;
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
 		e.preventDefault();
         e = e.originalEvent;
-		x = e.pageX-90;
+		x = e.pageX;
 		y = e.pageY-74;
 		ctx.lineTo(x,y);
 		ctx.stroke();
@@ -218,13 +218,13 @@ var drawMouse = function() {
 	var start = function(e) {
 		clicked = 1;
 		ctx.beginPath();
-		x = e.pageX-90;
+		x = e.pageX;
 		y = e.pageY-74;
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
 		if(clicked){
-			x = e.pageX-90;
+			x = e.pageX;
 			y = e.pageY-74;
 			ctx.lineTo(x,y);
 			ctx.stroke();
