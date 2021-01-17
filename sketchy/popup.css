@@ -4,7 +4,7 @@
     background-color: #FFF9EB;
 }
 
-.navbar {
+.topbar {
     padding-top: 10px;
     text-align: center;
     background-color: #DAB8B6;
@@ -17,19 +17,24 @@
     height: 58.5px;
 }
 
-.clickable img:hover {
+
+.inner-body input {
+    outline: none;
+}
+
+.clickable input:hover {
     opacity: 0.7;
     cursor: pointer;
 }
 
-.toolbar img {
+.toolbar input {
     width: 45px;
     height: 45px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.modes img {
+.modes input {
     width: 55px;
     height: 55px;
     margin-left: 2px;
@@ -63,4 +68,31 @@
         margin-right: 4px;
     }
 
+.inner-body .container:hover {
+    cursor: cell;
+}
+
+.bottombar {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    background-color: #DAB8B6;
+    height: 60px;
+    width: 100%;
+}
+
+.bottombar button {
+    margin-left: 1%;
+    margin-right: 1%;
+    float: right;
+    color: black;
+    border-color: black;
+    font-family: 'Oxygen Mono', Regular 400;
+}
+
+.bottombar button:hover {
+    background-color: black;
+    border-color: black;
+    color: white;
+}
 
