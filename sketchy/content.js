@@ -1,5 +1,6 @@
 var ctx, color = "#000";
 var darkMode = false;
+var rainbowMode = false;
 var backgroundColor = "#FFF9EB";
 
 function test(){
@@ -11,22 +12,40 @@ document.addEventListener('DOMContentLoaded', function() {
     var pen = document.getElementById('pen');
     // onClick's logic below:
     pen.addEventListener('click', function() { 
-        if (darkMode == false) {
-            ctx.strokeStyle = "#000000";
-        } else {
+        if (darkMode == true) {
             ctx.strokeStyle = "#FFFFFF";
+        } else if(rainbowMode == true){
+	    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+	    grd.addColorStop(0, "black");
+	    grd.addColorStop("0.3", "magenta");
+	    grd.addColorStop("0.5", "blue");
+	    grd.addColorStop("0.6", "green");
+            grd.addColorStop("0.8", "yellow");
+ 	    grd.addColorStop(1, "red");
+	}else{
+            ctx.strokeStyle = "#000000";
         }
     });
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    var jpg = document.getElementById('jpg');
+    jpg.addEventListener('click', function() {
+        var canvas = document.getElementById('canvas');
+        jpg.href = canvas.toDataURL("image/jpeg", 1.0);
+        jpg.download = 'note.jpg';
+        })
+    })
+document.addEventListener('DOMContentLoaded', function() {
     var erase = document.getElementById('eraser');
     // onClick's logic below:
     erase.addEventListener('click', function() {
-        if (darkMode == false) {
-            ctx.strokeStyle = "#FFF9EB";
-        } else {
+        if (darkMode == true) {
             ctx.strokeStyle = "#201F4B";
+        } else if(rainbowMode == true){
+	    ctx.strokeStyle = "#E5E5E5";
+	} else{
+            ctx.strokeStyle = "#FFF9EB";
         }
     });
 });
@@ -43,10 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // onClick's logic below:
     dark.addEventListener('click', function() {
         darkMode = true;
+	rainbowMode = false;
         // Bottombar
         document.getElementsByClassName("bottombar")[0].style.backgroundColor="#533A89";
         // Navbar
         document.getElementsByClassName("topbar")[0].style.backgroundColor="#533A89";
+        document.getElementsByClassName("topbar")[0].style.backgroundImage="none";
         // Canvas
         document.getElementsByClassName("inner-body")[0].style.backgroundColor="#201F4B";
         // Logo
@@ -75,14 +96,61 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    var rb = document.getElementById('rainbow');
+    // onClick's logic below:
+    rb.addEventListener('click', function() {
+        rainbowMode = true;
+	darkMode = false;
+        // Bottombar
+        document.getElementsByClassName("bottombar")[0].style.backgroundColor="#C3DAE9";
+        // Navbar
+        document.getElementsByClassName("topbar")[0].style.backgroundColor="#E5E5E5";
+        document.getElementsByClassName("topbar")[0].style.backgroundImage= "url('./images/poke.png')";
+	    // Canvas
+        document.getElementsByClassName("inner-body")[0].style.backgroundColor="#E5E5E5";
+        // Logo
+        document.getElementsByClassName("logo")[0].style.filter="none";
+        // Pen
+        document.getElementById("pen").style.filter="none";
+        // Eraser
+        document.getElementById("eraser").style.filter="none";
+        // Clear
+        document.getElementById("clear").style.filter="none";
+        // Thiccs
+        var thiccs = document.getElementsByClassName("thick");
+        for (var i = 0; i < thiccs.length; i++) {
+            thiccs[i].style.filter="none";
+        }
+        // Save-Buttons
+        var buttons = document.getElementsByClassName("save-button");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].style.cssText="color: black; border-color: black;"
+        }
+        // Pen Color
+        ctx.strokeStyle = "#E5E5E5";
+        backgroundColor = "#E5E5E5"
+        drawRect();
+	var grd = ctx.createLinearGradient(0, 0, 170, 0);
+	grd.addColorStop(0, "black");
+	grd.addColorStop("0.3", "magenta");
+	grd.addColorStop("0.5", "blue");
+	grd.addColorStop("0.6", "green");
+        grd.addColorStop("0.8", "yellow");
+ 	grd.addColorStop(1, "red");
+
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
     var regular = document.getElementById('regular');
     // onClick's logic below:
     regular.addEventListener('click', function() {
         darkMode = false;
+	rainbowMode = false;
         // Bottombar
         document.getElementsByClassName("bottombar")[0].style.backgroundColor="#DAB8B6";
         // Navbar
         document.getElementsByClassName("topbar")[0].style.backgroundColor="#DAB8B6";
+        document.getElementsByClassName("topbar")[0].style.backgroundImage="none";
         // Canvas
         document.getElementsByClassName("inner-body")[0].style.backgroundColor="#FFF9EB";
         // Logo
@@ -255,64 +323,3 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     })
 
-//Google drive stuff
-      var clientId = '573644075529-c4ucnfe2p4u4auoc91069op3p9sd0shn.apps.googleusercontent.com';
-      var apiKey = 'AIzaSyBXWkl9rIf1oSptOPGVc3r5lgeA0vAeAEA';
-      // To enter one or more authentication scopes, refer to the documentation for the API.
-      var scopes = 'https://www.googleapis.com/auth/drive';
-
-      // Use a button to handle authentication the first time.
-      function handleClientLoad() {
-        gapi.client.setApiKey(apiKey);
-        window.setTimeout(checkAuth,1);
-      }
-
-      function checkAuth() {
-        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, handleAuthResult);
-      }
-
-      function handleAuthResult(authResult) {
-        var authorizeButton = document.getElementById('authorize-button');
-        if (authResult && !authResult.error) {
-          authorizeButton.style.visibility = 'hidden';
-          makeApiCall();
-        } else {
-          authorizeButton.style.visibility = '';
-          authorizeButton.onclick = handleAuthClick;
-        }
-      }
-
-      function handleAuthClick(event) {
-        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthResult);
-        return false;
-      }
-
-      // Load the API and make an API call.  Display the results on the screen.
-      function makeApiCall() {
-        gapi.client.load('drive', 'v2', function() {
-
-          var request = gapi.client.drive.files.list ( {'maxResults': 5 } );
-
-          request.execute(function(resp) {          
-            for (i=0; i<resp.items.length; i++) {
-                    var titulo = resp.items[i].title;
-                    var fechaUpd = resp.items[i].modifiedDate;
-                    var userUpd = resp.items[i].lastModifyingUserName;
-
-                    var fileInfo = document.createElement('li');
-                    fileInfo.appendChild(document.createTextNode('TITLE: ' + titulo + ' - LAST MODIF: ' + fechaUpd + ' - BY: ' + userUpd ));                
-                    document.getElementById('content').appendChild(fileInfo);
-            }
-          });        
-        });
-      }
-    
-document.addEventListener('DOMContentLoaded', function() {
-    var jpg = document.getElementById('jpg');
-    jpg.addEventListener('click', function() {
-        var canvas = document.getElementById('canvas');
-        jpg.href = canvas.toDataURL("image/jpeg", 1.0);
-        jpg.download = 'note.jpg';
-        })
-    })
-        
