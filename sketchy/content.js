@@ -245,7 +245,16 @@ document.addEventListener('DOMContentLoaded', function() {
         png.download = 'note.png';
         })
     })
-<<<<<<< HEAD
+
+document.addEventListener('DOMContentLoaded', function() {
+    var jpg = document.getElementById('jpg');
+    jpg.addEventListener('click', function() {
+        var canvas = document.getElementById('canvas');
+        jpg.href = canvas.toDataURL("image/jpeg", 1.0);
+        jpg.download = 'note.jpg';
+        })
+    })
+            
 
 
 //Google drive stuff
@@ -299,15 +308,3 @@ document.addEventListener('DOMContentLoaded', function() {
           });        
         });
       }
-=======
-    
-document.addEventListener('DOMContentLoaded', function() {
-    var jpg = document.getElementById('jpg');
-    jpg.addEventListener('click', function() {
-        var canvas = document.getElementById('canvas');
-        jpg.href = canvas.toDataURL("image/jpeg", 1.0);
-        jpg.download = 'note.jpg';
-        })
-    })
-        
->>>>>>> 5360cbff47d09356961ff8e1a3e069a6cef0e2f1
