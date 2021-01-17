@@ -1,8 +1,12 @@
 # Bread
 **Bread** is a team formed for the Hack the North 2020++ weekend and the team behind the creation of **Sketchy**. The team consists of 4 members of different university backgrounds:
+
 *Rosalyn Cheng* - 4th year Commerce student at Queen's University
+
 *Terry Luan* - 2nd year Electrical & Computing Engineering student at University of Toronto
+
 *Jasper Mai* - 2nd year Computer Science student at University of Toronto
+
 *Jenny Vong* - 2nd year Mathematics student at University of Waterloo
 
 
