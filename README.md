@@ -1,5 +1,5 @@
 # Team Bread
-**Team Bread** was formed for the Hack the North 2020++ hackathon and the team behind the creation of **Sketchy**. The team consists of 4 members with various education and university backgrounds:
+**Team Bread** was formed for the Hack the North 2020++ hackathon and is the team behind the creation of **Sketchy**. The team consists of 4 members with various education and university backgrounds:
 
 *Rosalyn Cheng* - 4th year Commerce student at Queen's University
 
