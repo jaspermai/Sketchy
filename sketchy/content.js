@@ -254,8 +254,6 @@ document.addEventListener('DOMContentLoaded', function() {
         jpg.download = 'note.jpg';
         })
     })
-            
-
 
 //Google drive stuff
       var clientId = '573644075529-c4ucnfe2p4u4auoc91069op3p9sd0shn.apps.googleusercontent.com';
