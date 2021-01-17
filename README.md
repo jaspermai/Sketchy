@@ -6,7 +6,7 @@
 *Jenny Vong* - 2nd year Mathematics student at University of Waterloo
 
 # SKETCHY
-## What is Sketchy?
+### What is Sketchy?
 ![Image of Sketchy Logo](https://github.com/terryluan12/bread/blob/main/sketchy/images/LOGO.png)
 
 While there are many apps for doing sketches or jotting down notes (e.g. sketchpad.io and notepad.io), none of these applications provide quick access and they all require additional actions of operning a new webpage or tab. **Sketchy** is a Google Chrome Extension that allow users to quickly *sketch* down some drawings or notes. Users can use the application for any momentary ideas and save their canvas onto their computer as a .png or .jpg file for future access. 
